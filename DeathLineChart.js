@@ -207,7 +207,7 @@ function GenerateDeathChart() {
             ],
         };
 
-        const totalDuration = 400;
+        const totalDuration = 350;
         const delayBetweenPoints = totalDuration / data.length;
         const previousY = (ctx) =>
             ctx.index === 0 ?
