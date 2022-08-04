@@ -275,9 +275,10 @@ function GenerateDeathChart() {
                     },
                     title: {
                         display: true,
-                        text: "Covid-19 Accumulated Deaths by Age Group in Singapore",
+                        text: "COVID-19 Accumulated Deaths by Age Group in Singapore",
                         font: {
-                            size: 20,
+                            size: 28,
+                            weight: 'bold',
                         },
                     },
                 },
