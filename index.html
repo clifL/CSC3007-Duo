@@ -24,18 +24,29 @@
 </head>
 
 <body>
-    <div class="section" id="section5">
-        <h1 class = "center"><strong>The Singapore Story</strong></h1>
-        <h3 class = "top">Its been more than 2 years since the first locally transmitted case was reported in Singapore. Let's take a look at how the situation has evolved.</h3>
+    <div class="section sectionGrey">
+        <div class="center">
+            <div class="col-sm-3">
+                <h1><strong>The Singapore Story</strong></h1>
+            </div>
+            <div class="col-sm-9">
+                <h2>Its been more than 2 years since the first locally transmitted case was reported in Singapore.
+                    Let's take a look at how the situation has evolved.</h2>
+            </div>
+        </div>
     </div>
-    <div class="section" id="section5">
-        <h1><strong>Cases in Singapore</strong></h1>
-        <h3>Singapore has been experiencing a rise in Covid-19 cases with a majority of the case belonging to the 20 -
-            39 age group.</h3>
+
+    <div class="section sectionBlack">
+        <div class="center">
+            <h1 class="whiteText paddingLeft paddingRight"><strong>Singapore has been experiencing a <span
+                        style='color: yellow;'>rise</span> in Covid-19 cases with a majority of the case belonging to
+                    the <span style='color: yellow;'>20 -
+                        39 age group.</span></strong></h1>
+        </div>
+
     </div>
     <div class="section" id="section5">
         <div class="rootContainer">
-            <div id="whiteOverlay"></div>
             <canvas id="cases-line-chart"></canvas>
         </div>
     </div>
@@ -45,17 +56,13 @@
             <h1><strong>Did you know?</strong></h1>
             </p>
             <p>
-            <h3>Case numbers on Tuesdays tend to be higher compared with the rest of the week as they reflect the spike
-                in infections after the weekend, when more people are out in various social settings.</h3>
+            <h3 class="paddingLeft paddingRight"><strong>Case numbers on Tuesdays tend to be higher compared with the rest of the week as they reflect the spike
+                in infections after the weekend, when more people are out in various social settings.</strong></h3>
             </p>
-
-
-
         </div>
     </div>
     <div class="section" id="section5">
         <div class="rootContainer">
-            <div id="whiteOverlay"></div>
             <canvas id="cases-day"></canvas>
         </div>
     </div>
@@ -71,19 +78,19 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6">
-                    <h3>ICU Rate by Vaccination Status</h3>
+                    <h3 style="text-align: center; padding-right: 10px;"><strong>ICU Rate by Vaccination Status (Percentage)</strong></h3>
                     <div class="rootContainerTwo">
-                    
+
                         <canvas id="icu"></canvas>
-                    </div> 
+                    </div>
 
                 </div>
                 <div class="col-sm-6">
-                    <h3>Death Rate by Vaccination Status</h3>
+                    <h3 style="text-align: center; padding-right: 10px;"><strong>Death Rate by Vaccination Status (Percentage)</strong></h3>
                     <div class="rootContainerTwo">
-                    
+
                         <canvas id="death"></canvas>
-                    </div> 
+                    </div>
                 </div>
 
             </div>
@@ -143,25 +150,19 @@
             </div>
         </div>
     </div>
-    <div class="section" id="section5">
-        <div class="rootContainer">
-            <!-- <canvas id="icu"></canvas> -->
-        </div>
-    </div>
-    <div class="section" id="section7">
-
-
-
-        <h1 style="text-align: center;"><strong>Summary</strong></h1>
-        <div class="paddingTop paddingLeft paddingRight">
+    <div class="section sectionBlack">
+        <h1 class="whiteText" style="text-align: center;"><strong>Summary</strong></h1>
+        <div class=" paddingTop paddingLeft paddingRight">
             <ul class="paddingLeft" style="list-style-type:square">
-                <h3><strong>
-                        <li>Those in age group above 80 years old are more susceptible to Covid-19.</li>
+                <h3 class="whiteText"><strong>
+                        <li>Those in age group <span style='color: yellow;'>above 80 years old</span> are more <span style='color: yellow;'>susceptible</span> to Covid-19.</li>
 
-                        <li class="paddingTopMore">Despite accounting for majority of the new Covid-19 cases, the death count for those 30 does not corelate with the number of cases.
+                        <li class="paddingTopMore">Despite accounting for majority of the new Covid-19 cases, the death
+                            count for those 30 <span style='color: yellow;'>does not corelate</span> with the number of cases.
                         </li>
                         <li class="paddingTopMore">
-                            Vaccination with Booster remains a key factor in preventing serious complication or susceptibility to Covid-19. </span>.
+                            Vaccination with Booster remains a <span style='color: yellow;'>key factor</span> in preventing serious complication or
+                            susceptibility to Covid-19.
                         </li>
                     </strong>
                 </h3>

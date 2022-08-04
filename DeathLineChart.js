@@ -14,9 +14,9 @@ var age_60_69 = [];
 var age_70_79 = [];
 var age_80_above = [];
 let ctx = document.getElementById("deathRateChart").getContext("2d");
-var multiLineChart = "";
+var multiLineChartDeath = "";
 
-function GenerateChart() {
+function GenerateDeathChart() {
     Promise.all([d3.csv("Clean_DeathByMonthAndAge.csv")]).then((data) => {
         for (let i = 0; i < data[0].length; i++) {
             date_range.push(data[0][i]["str_date"]);
@@ -244,7 +244,7 @@ function GenerateChart() {
             },
         };
 
-        multiLineChart = new Chart(ctx, {
+        multiLineChartDeath = new Chart(ctx, {
             type: "line",
             data: chartData,
             plugins: [ChartDataLabels],
@@ -287,7 +287,7 @@ function GenerateChart() {
 }
 
 function Replay() {
-    multiLineChart.destroy();
+    multiLineChartDeath.destroy();
     date_range = [];
     age_0_19 = [];
     age_20_29 = [];
@@ -297,15 +297,15 @@ function Replay() {
     age_60_69 = [];
     age_70_79 = [];
     age_80_above = [];
-    GenerateChart();
+    GenerateDeathChart();
 }
 
 function Pause() {
-    multiLineChart.stop();
+    multiLineChartDeath.stop();
 }
 
 function Resume() {
-    multiLineChart.update();
+    multiLineChartDeath.update();
 }
 
-GenerateChart();
+GenerateDeathChart();

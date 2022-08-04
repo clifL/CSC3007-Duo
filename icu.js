@@ -17,18 +17,18 @@ Promise.all([d3.csv("covid-19-case-numbers/icu-count.csv")]).then(data1 => {
 
   // Data preprocessing
   data1[0].forEach(e => {
-      // e.source = e.infector;
-      // e.target = e.infectee;
-      // console.log(e.age_group)
-      if (e.status == 'boost'){
-        y_data_1.push(e.count);
-      }
-      if (e.status == 'unboost'){
-        y_data_2.push(e.count);
-      }
-      if (e.status == 'no'){
-        y_data_3.push(e.count);
-      }
+    // e.source = e.infector;
+    // e.target = e.infectee;
+    // console.log(e.age_group)
+    if (e.status == 'boost') {
+      y_data_1.push(e.count);
+    }
+    if (e.status == 'unboost') {
+      y_data_2.push(e.count);
+    }
+    if (e.status == 'no') {
+      y_data_3.push(e.count);
+    }
   });
 
 
@@ -42,48 +42,59 @@ Promise.all([d3.csv("covid-19-case-numbers/icu-count.csv")]).then(data1 => {
 
 
 
-const labels = ["Vaccinated with Booster", "Vaccinated without Booster", "Not Vaccinated"];
-const data = {
-  labels:labels,
-  datasets: [{
-    label: 'My First Dataset',
-    data: [y_data_1, y_data_2, y_data_3],
-    backgroundColor: [
-      'rgb(54, 162, 235)',
-      'rgb(255, 205, 86)',
-      'rgb(255, 99, 132)',
-    ],
-    hoverOffset: 4
-  }]
-};
-
-// Style Configurations
-const config = {
-  type: "pie",
-  data: data,
-  options: {
-    responsive: false,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        position: "top",
+  const labels = ["Vaccinated with Booster", "Vaccinated without Booster", "Not Vaccinated"];
+  const data = {
+    labels: labels,
+    datasets: [{
+      datalabels: {
+        backgroundColor: "white",
+        font: {
+          weight: "bold",
+          size: 25,
+        },
+        borderWidth: 10,
+        borderRadius: 2,
       },
-      title: {
-        display: true,
-        text: "Chart.js Line Chart",
-      },
-    },
-  },
-};
+      label: '',
+      data: [y_data_1, y_data_2, y_data_3],
+      backgroundColor: [
+        'rgb(253, 231, 37)',
+        'rgb(62, 73, 137)',
+        'rgb(68, 1, 84)',
+      ],
+      hoverOffset: 4
+    }]
+  };
 
-// Plotting
-let myChart = document.getElementById("icu").getContext("2d");
-let multiLineChart = new Chart(
-  myChart,
-  {
+  // Style Configurations
+  const config = {
     type: "pie",
     data: data,
-  },
-    
-);
+    plugins: [ChartDataLabels],
+    options: {
+      responsive: false,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: "top",
+        },
+        title: {
+          display: true,
+          text: "",
+        },
+      },
+    },
+  };
+
+  // Plotting
+  let myChart = document.getElementById("icu").getContext("2d");
+  let multiLineChart = new Chart(
+    myChart,
+    {
+      type: "pie",
+      data: data,
+      plugins: [ChartDataLabels],
+    },
+
+  );
 })

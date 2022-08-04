@@ -46,12 +46,21 @@ const labels = ["Vaccinated with Booster", "Vaccinated without Booster", "Not Va
 const data = {
   labels:labels,
   datasets: [{
-    label: 'My First Dataset',
+    datalabels: {
+      backgroundColor: "white",
+      font: {
+        weight: "bold",
+        size: 25,
+      },
+      borderWidth: 9,
+      borderRadius: 2,
+    },
+    label: '',
     data: [y_data_1, y_data_2, y_data_3],
     backgroundColor: [
-      'rgb(54, 162, 235)',
-      'rgb(255, 205, 86)',
-      'rgb(255, 99, 132)',
+      'rgb(253, 231, 37)',
+      'rgb(62, 73, 137)',
+      'rgb(68, 1, 84)',
     ],
     hoverOffset: 4
   }]
@@ -83,6 +92,7 @@ let multiLineChart = new Chart(
   {
     type: "pie",
     data: data,
+    plugins: [ChartDataLabels],
   },
     
 );
