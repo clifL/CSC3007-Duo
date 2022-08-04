@@ -255,7 +255,7 @@ function GenerateChart() {
                     y: {
                         title: {
                             display: true,
-                            text: "Number of Cases",
+                            text: "Number of Cases for past 28 days",
                         }
                     },
                 },
@@ -277,7 +277,7 @@ function GenerateChart() {
                     },
                     title: {
                         display: true,
-                        text: "Covid-19 Cases in Singapore",
+                        text: "Covid-19 Cases in Singapore for past 28 days",
                         font: {
                             size: 20,
                         },

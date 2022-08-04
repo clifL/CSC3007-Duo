@@ -174,7 +174,7 @@ Promise.all([d3.csv("covid-19-case-numbers/number-of-local-cases-by-day.csv")]).
           },
           title: {
             display: true,
-            text: "COVID-19 Infection Rate By Day",
+            text: "COVID-19 Infection Rate By Day for past 28 days",
             font: {
               size: 30,
               weight: 'bold',
