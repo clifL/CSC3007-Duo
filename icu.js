@@ -59,7 +59,7 @@ Promise.all([d3.csv("covid-19-case-numbers/icu-count.csv")]).then(data1 => {
       data: [y_data_1, y_data_2, y_data_3],
       backgroundColor: [
         'rgb(253, 231, 37)',
-        'rgb(62, 73, 137)',
+        'rgb(255,99,132)',
         'rgb(68, 1, 84)',
       ],
       hoverOffset: 4
